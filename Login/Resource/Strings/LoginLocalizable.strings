@@ -1,0 +1,14 @@
+/* 
+  LoginLocalizable.strings
+  Login
+
+  Created by Allan Amaral on 13/07/22.
+  
+*/
+
+"email"="Email";
+"emailPlaceholder"="Endereço de email para logar";
+"password"="Senha";
+"passwordPlaceholder"="Digite sua senha";
+"buttonLogin"="Entrar";
+"buttonRegister"="Registrar";
