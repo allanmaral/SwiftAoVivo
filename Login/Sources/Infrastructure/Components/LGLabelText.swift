@@ -46,7 +46,7 @@ class LGLabelText: UIView {
             label.leftAnchor.constraint(equalTo: self.leftAnchor),
             label.rightAnchor.constraint(equalTo: self.rightAnchor),
             
-            textField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 8),
+            textField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: Spacing.small),
             textField.leftAnchor.constraint(equalTo: self.leftAnchor),
             textField.rightAnchor.constraint(equalTo: self.rightAnchor),
             
