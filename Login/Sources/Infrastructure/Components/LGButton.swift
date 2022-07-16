@@ -48,7 +48,7 @@ struct LGButtonStyle {
     let textColor: UIColor
     
     static let primary = LGButtonStyle(backgroundColor: .primary, textColor: .skyWhite)
-    static let transparent = LGButtonStyle(backgroundColor: .clear, textColor: .primary)
+    static let transparent = LGButtonStyle(backgroundColor: .clear, textColor: .buttonTransparentText)
 }
 
 struct LGButtonSize {

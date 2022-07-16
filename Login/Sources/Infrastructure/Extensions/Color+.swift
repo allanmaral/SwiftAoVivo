@@ -32,4 +32,8 @@ extension UIColor {
     static var labelText: UIColor {
         UIColor(named: "LGLabelText") ?? .red
     }
+    
+    static var buttonTransparentText: UIColor {
+        UIColor(named: "LGButtonTransparentText") ?? .red
+    }
 }
