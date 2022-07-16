@@ -19,7 +19,7 @@ class LoginView: UIView {
     
     lazy var emailField = LGLabelText(label: LocalizableStrings.email.localize(),
                                       placeholder: LocalizableStrings.emailPlaceholder.localize(),
-                                      font: .systemFont(ofSize: 14),
+                                      font: .input,
                                       keyboardType: .emailAddress,
                                       returnKeyType: .next)
     
@@ -28,13 +28,13 @@ class LoginView: UIView {
     
     lazy var buttonLogin = LGButton(title: LocalizableStrings.buttonLogin.localize())
     
-    lazy var buttonRegister = LGButton(title: LocalizableStrings.buttonRegister.localize(), style: .secondary)
+    lazy var buttonRegister = LGButton(title: LocalizableStrings.buttonRegister.localize(), style: .transparent)
     
     // MARK: - Inits
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = .viewBackgroundColor
+        self.backgroundColor = .viewBackground
         
         setupVisualElements()
     }
@@ -67,7 +67,7 @@ class LoginView: UIView {
         self.addSubview(emailField)
         
         NSLayoutConstraint.activate([
-            emailField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: Spacing.medium),
+            emailField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: Spacing.large),
             emailField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: LayoutContansts.horizontalMarging),
             emailField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -LayoutContansts.horizontalMarging),
         ])

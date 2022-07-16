@@ -22,8 +22,8 @@ class LGLabel: UILabel {
     
     private func initDefault() {
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.font = .systemFont(ofSize: Constants.labelFontSize)
-        self.textColor = .labelTextColor
+        self.font = .label
+        self.textColor = .labelText
         self.textAlignment = .left
     }
 }

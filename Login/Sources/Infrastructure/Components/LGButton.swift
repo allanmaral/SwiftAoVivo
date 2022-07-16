@@ -8,10 +8,16 @@
 import UIKit
 
 class LGButton: UIButton {
-    let style: LGButtonStyle
+    private struct Constants {
+        static let font = UIFont.label
+    }
     
-    init(title: String, style: LGButtonStyle = .primary) {
+    let style: LGButtonStyle
+    let size: LGButtonSize
+    
+    init(title: String, style: LGButtonStyle = .primary, size: LGButtonSize = .normal) {
         self.style = style
+        self.size = size
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
         
@@ -26,7 +32,14 @@ class LGButton: UIButton {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = style.backgroundColor
         self.setTitleColor(style.textColor, for: .normal)
-        self.layer.cornerRadius = Constants.buttonCornerRadius
+        self.layer.cornerRadius = size.height / 2
+        self.titleLabel?.font = Constants.font
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        var contentSize = super.intrinsicContentSize
+        contentSize.height = size.height
+        return contentSize
     }
 }
 
@@ -34,6 +47,13 @@ struct LGButtonStyle {
     let backgroundColor: UIColor
     let textColor: UIColor
     
-    static let primary = LGButtonStyle(backgroundColor: .buttonBackground, textColor: .buttonTextColor)
-    static let secondary = LGButtonStyle(backgroundColor: .clear, textColor: .labelTextColor)
+    static let primary = LGButtonStyle(backgroundColor: .primary, textColor: .skyWhite)
+    static let transparent = LGButtonStyle(backgroundColor: .clear, textColor: .primary)
+}
+
+struct LGButtonSize {
+    let height: CGFloat
+    
+    static let normal = LGButtonSize(height: 48)
+    static let small = LGButtonSize(height: 32)
 }
