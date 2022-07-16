@@ -8,19 +8,28 @@
 import UIKit
 
 extension UIColor {
-    static var buttonBackground: UIColor {
-        return UIColor(named: "ButtonBackground") ?? .red
+    static var primary: UIColor {
+        UIColor(named: "LGPrimary") ?? .red
+    }
+    static var skyWhite: UIColor {
+        UIColor(named: "LGSkyWhite") ?? .red
     }
     
-    static var buttonTextColor: UIColor {
-        return UIColor(named: "ButtonTextColor") ?? .red
+    static var viewBackground: UIColor {
+        return UIColor(named: "LGBackground") ?? .red
     }
     
-    static var labelTextColor: UIColor {
-        return UIColor(named: "LabelTextColor") ?? .red
+    static var inputBackground: UIColor {
+        UIColor(named: "LGInputBackground") ?? .red
+    }
+    static var inputBorder: UIColor {
+        UIColor(named: "LGInputBorder") ?? .red
+    }
+    static var inputPlaceholder: UIColor {
+        UIColor(named: "LGInputPlaceholder") ?? .red
     }
     
-    static var viewBackgroundColor: UIColor {
-        return UIColor(named: "ViewBackground") ?? .red
+    static var labelText: UIColor {
+        UIColor(named: "LGLabelText") ?? .red
     }
 }

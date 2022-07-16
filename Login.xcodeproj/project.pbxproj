@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D7E408F288252FA009D419D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7E408E288252FA009D419D /* Colors.xcassets */; };
+		9D7E409128826091009D419D /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E409028826091009D419D /* Font+.swift */; };
 		9DF31706287F7B2C0092C14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF31705287F7B2C0092C14B /* AppDelegate.swift */; };
 		9DF31708287F7B2C0092C14B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF31707287F7B2C0092C14B /* SceneDelegate.swift */; };
 		9DF31710287F7B2C0092C14B /* Login.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DF3170E287F7B2C0092C14B /* Login.xcdatamodeld */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D7E408E288252FA009D419D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9D7E409028826091009D419D /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		9DF31702287F7B2C0092C14B /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF31705287F7B2C0092C14B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DF31707287F7B2C0092C14B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				9DF31711287F7B2D0092C14B /* Assets.xcassets */,
 				9DF31713287F7B2D0092C14B /* LaunchScreen.storyboard */,
 				9DF3170E287F7B2C0092C14B /* Login.xcdatamodeld */,
+				9D7E408E288252FA009D419D /* Colors.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			children = (
 				9DF3174F287F97060092C14B /* Color+.swift */,
 				9DF3175D2880D30A0092C14B /* String+.swift */,
+				9D7E409028826091009D419D /* Font+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7E408F288252FA009D419D /* Colors.xcassets in Resources */,
 				9DF3174D287F88FF0092C14B /* LoginAccessibilityLocalizable.strings in Resources */,
 				9DF31715287F7B2D0092C14B /* LaunchScreen.storyboard in Resources */,
 				9DF31712287F7B2D0092C14B /* Assets.xcassets in Resources */,
@@ -386,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7E409128826091009D419D /* Font+.swift in Sources */,
 				9DF31742287F7E3F0092C14B /* LoginViewController.swift in Sources */,
 				9DF31756287F9D4B0092C14B /* Constants.swift in Sources */,
 				9DF3175C2880D2580092C14B /* LGLabelText.swift in Sources */,
