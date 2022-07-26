@@ -24,6 +24,16 @@ class LGButton: UIButton {
         initDefault()
     }
     
+    init(image: UIImage, style: LGButtonStyle = .primary, size: LGButtonSize = .normal) {
+        self.style = style
+        self.size = size
+        super.init(frame: .zero)
+        self.setImage(image, for: .normal)
+        self.tintColor = style.textColor
+        
+        initDefault()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -35,5 +35,5 @@ struct CornerRadius {
 }
 
 struct LayoutContansts {
-    static let horizontalMarging = Spacing.medium
+    static let horizontalMargin = Spacing.medium
 }

@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D6D3CD7288615DA00F2B761 /* LGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CD6288615DA00F2B761 /* LGView.swift */; };
+		9D6D3CD928861D9A00F2B761 /* LGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CD828861D9A00F2B761 /* LGViewController.swift */; };
+		9D6D3CDB288623DC00F2B761 /* LoginViewTextFieldDelegate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CDA288623DC00F2B761 /* LoginViewTextFieldDelegate+.swift */; };
+		9D6D3CDE2886330400F2B761 /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CDD2886330400F2B761 /* RegExp.swift */; };
+		9D6D3CE02886490500F2B761 /* NSLayoutConstraint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CDF2886490500F2B761 /* NSLayoutConstraint+.swift */; };
+		9D6D3CE22888B91300F2B761 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CE12888B91300F2B761 /* RegisterCoordinator.swift */; };
+		9D6D3CE52888B9A600F2B761 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CE42888B9A600F2B761 /* RegisterViewController.swift */; };
+		9D6D3CE72888B9CE00F2B761 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CE62888B9CE00F2B761 /* RegisterView.swift */; };
+		9D6D3CEA2888D61A00F2B761 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CE92888D61A00F2B761 /* ProfileViewController.swift */; };
+		9D6D3CEC2888D63300F2B761 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CEB2888D63300F2B761 /* ProfileView.swift */; };
+		9D6D3CEE2888D64700F2B761 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CED2888D64700F2B761 /* ProfileCoordinator.swift */; };
+		9D7CCB6C288D8DB600BCF4DD /* RegisterViewTextFieldDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB6B288D8DB600BCF4DD /* RegisterViewTextFieldDelegateExtension.swift */; };
+		9D7CCB6E288DCD0500BCF4DD /* LGPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB6D288DCD0500BCF4DD /* LGPicker.swift */; };
+		9D7CCB70288DCF2700BCF4DD /* ProfileViewPickerDelegate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB6F288DCF2700BCF4DD /* ProfileViewPickerDelegate+.swift */; };
+		9D7CCB72288DF3FB00BCF4DD /* ProfileViewTextFieldDelegate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB71288DF3FB00BCF4DD /* ProfileViewTextFieldDelegate+.swift */; };
+		9D7CCB74288E293500BCF4DD /* CpfValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB73288E293500BCF4DD /* CpfValidator.swift */; };
+		9D7CCB77288E319F00BCF4DD /* AddressCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB76288E319F00BCF4DD /* AddressCoordinator.swift */; };
+		9D7CCB79288E320F00BCF4DD /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB78288E320F00BCF4DD /* AddressView.swift */; };
+		9D7CCB7B288E322E00BCF4DD /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB7A288E322E00BCF4DD /* AddressViewController.swift */; };
+		9D7CCB7E288F59AB00BCF4DD /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB7D288F59AB00BCF4DD /* Age.swift */; };
+		9D7CCB80288F59E100BCF4DD /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB7F288F59E100BCF4DD /* Gender.swift */; };
+		9D7CCB82288F6CB700BCF4DD /* AddressTextFieldDelegate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB81288F6CB700BCF4DD /* AddressTextFieldDelegate+.swift */; };
 		9D7E408F288252FA009D419D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7E408E288252FA009D419D /* Colors.xcassets */; };
 		9D7E409128826091009D419D /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E409028826091009D419D /* Font+.swift */; };
 		9DF31706287F7B2C0092C14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF31705287F7B2C0092C14B /* AppDelegate.swift */; };
@@ -51,6 +73,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D6D3CD6288615DA00F2B761 /* LGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGView.swift; sourceTree = "<group>"; };
+		9D6D3CD828861D9A00F2B761 /* LGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGViewController.swift; sourceTree = "<group>"; };
+		9D6D3CDA288623DC00F2B761 /* LoginViewTextFieldDelegate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewTextFieldDelegate+.swift"; sourceTree = "<group>"; };
+		9D6D3CDD2886330400F2B761 /* RegExp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExp.swift; sourceTree = "<group>"; };
+		9D6D3CDF2886490500F2B761 /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
+		9D6D3CE12888B91300F2B761 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		9D6D3CE42888B9A600F2B761 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9D6D3CE62888B9CE00F2B761 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		9D6D3CE92888D61A00F2B761 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9D6D3CEB2888D63300F2B761 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		9D6D3CED2888D64700F2B761 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		9D7CCB6B288D8DB600BCF4DD /* RegisterViewTextFieldDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewTextFieldDelegateExtension.swift; sourceTree = "<group>"; };
+		9D7CCB6D288DCD0500BCF4DD /* LGPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGPicker.swift; sourceTree = "<group>"; };
+		9D7CCB6F288DCF2700BCF4DD /* ProfileViewPickerDelegate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewPickerDelegate+.swift"; sourceTree = "<group>"; };
+		9D7CCB71288DF3FB00BCF4DD /* ProfileViewTextFieldDelegate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewTextFieldDelegate+.swift"; sourceTree = "<group>"; };
+		9D7CCB73288E293500BCF4DD /* CpfValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpfValidator.swift; sourceTree = "<group>"; };
+		9D7CCB76288E319F00BCF4DD /* AddressCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCoordinator.swift; sourceTree = "<group>"; };
+		9D7CCB78288E320F00BCF4DD /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		9D7CCB7A288E322E00BCF4DD /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		9D7CCB7D288F59AB00BCF4DD /* Age.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
+		9D7CCB7F288F59E100BCF4DD /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		9D7CCB81288F6CB700BCF4DD /* AddressTextFieldDelegate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressTextFieldDelegate+.swift"; sourceTree = "<group>"; };
 		9D7E408E288252FA009D419D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9D7E409028826091009D419D /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		9DF31702287F7B2C0092C14B /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +150,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D6D3CDC288632F400F2B761 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D3CDD2886330400F2B761 /* RegExp.swift */,
+				9D7CCB73288E293500BCF4DD /* CpfValidator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9D6D3CE32888B99200F2B761 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D3CE62888B9CE00F2B761 /* RegisterView.swift */,
+				9D6D3CE42888B9A600F2B761 /* RegisterViewController.swift */,
+				9D7CCB6B288D8DB600BCF4DD /* RegisterViewTextFieldDelegateExtension.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		9D6D3CE82888D5FD00F2B761 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D3CEB2888D63300F2B761 /* ProfileView.swift */,
+				9D6D3CE92888D61A00F2B761 /* ProfileViewController.swift */,
+				9D7CCB6F288DCF2700BCF4DD /* ProfileViewPickerDelegate+.swift */,
+				9D7CCB71288DF3FB00BCF4DD /* ProfileViewTextFieldDelegate+.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		9D7CCB75288E317C00BCF4DD /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				9D7CCB78288E320F00BCF4DD /* AddressView.swift */,
+				9D7CCB7A288E322E00BCF4DD /* AddressViewController.swift */,
+				9D7CCB81288F6CB700BCF4DD /* AddressTextFieldDelegate+.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		9D7CCB7C288F598A00BCF4DD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				9D7CCB7D288F59AB00BCF4DD /* Age.swift */,
+				9D7CCB7F288F59E100BCF4DD /* Gender.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		9DF316F9287F7B2C0092C14B = {
 			isa = PBXGroup;
 			children = (
@@ -156,13 +249,13 @@
 		9DF31738287F7BC30092C14B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				9DF31745287F86BA0092C14B /* Strings */,
 				9DF31705287F7B2C0092C14B /* AppDelegate.swift */,
-				9DF31707287F7B2C0092C14B /* SceneDelegate.swift */,
 				9DF31711287F7B2D0092C14B /* Assets.xcassets */,
+				9D7E408E288252FA009D419D /* Colors.xcassets */,
 				9DF31713287F7B2D0092C14B /* LaunchScreen.storyboard */,
 				9DF3170E287F7B2C0092C14B /* Login.xcdatamodeld */,
-				9D7E408E288252FA009D419D /* Colors.xcassets */,
+				9DF31707287F7B2C0092C14B /* SceneDelegate.swift */,
+				9DF31745287F86BA0092C14B /* Strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -172,6 +265,7 @@
 			children = (
 				9DF3173F287F7E250092C14B /* Controllers */,
 				9DF3173A287F7CA20092C14B /* Coordinator */,
+				9D7CCB7C288F598A00BCF4DD /* Domain */,
 				9DF31748287F87580092C14B /* Infrastructure */,
 			);
 			path = Sources;
@@ -180,8 +274,11 @@
 		9DF3173A287F7CA20092C14B /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				9D7CCB76288E319F00BCF4DD /* AddressCoordinator.swift */,
 				9DF3173B287F7CC50092C14B /* Coordinator.swift */,
 				9DF3173D287F7CEB0092C14B /* LoginCoordinator.swift */,
+				9D6D3CED2888D64700F2B761 /* ProfileCoordinator.swift */,
+				9D6D3CE12888B91300F2B761 /* RegisterCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -189,7 +286,10 @@
 		9DF3173F287F7E250092C14B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9D7CCB75288E317C00BCF4DD /* Address */,
 				9DF31740287F7E2F0092C14B /* Login */,
+				9D6D3CE82888D5FD00F2B761 /* Profile */,
+				9D6D3CE32888B99200F2B761 /* Register */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +299,7 @@
 			children = (
 				9DF31743287F7F530092C14B /* LoginView.swift */,
 				9DF31741287F7E3F0092C14B /* LoginViewController.swift */,
+				9D6D3CDA288623DC00F2B761 /* LoginViewTextFieldDelegate+.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -206,8 +307,8 @@
 		9DF31745287F86BA0092C14B /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				9DF31746287F86D80092C14B /* LoginLocalizable.strings */,
 				9DF3174C287F88FF0092C14B /* LoginAccessibilityLocalizable.strings */,
+				9DF31746287F86D80092C14B /* LoginLocalizable.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -215,10 +316,11 @@
 		9DF31748287F87580092C14B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				9DF31754287F9D350092C14B /* Constants */,
 				9DF31751287F9BB40092C14B /* Components */,
+				9DF31754287F9D350092C14B /* Constants */,
 				9DF3174E287F96F20092C14B /* Extensions */,
 				9DF31749287F87650092C14B /* Localizable */,
+				9D6D3CDC288632F400F2B761 /* Utils */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -235,8 +337,9 @@
 			isa = PBXGroup;
 			children = (
 				9DF3174F287F97060092C14B /* Color+.swift */,
-				9DF3175D2880D30A0092C14B /* String+.swift */,
 				9D7E409028826091009D419D /* Font+.swift */,
+				9D6D3CDF2886490500F2B761 /* NSLayoutConstraint+.swift */,
+				9DF3175D2880D30A0092C14B /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,8 +349,11 @@
 			children = (
 				9DF31752287F9BD20092C14B /* LGButton.swift */,
 				9DF31757287FA1340092C14B /* LGLabel.swift */,
-				9DF317592880CE810092C14B /* LGTextField.swift */,
 				9DF3175B2880D2580092C14B /* LGLabelText.swift */,
+				9DF317592880CE810092C14B /* LGTextField.swift */,
+				9D6D3CD6288615DA00F2B761 /* LGView.swift */,
+				9D6D3CD828861D9A00F2B761 /* LGViewController.swift */,
+				9D7CCB6D288DCD0500BCF4DD /* LGPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -401,14 +507,36 @@
 				9DF31750287F97060092C14B /* Color+.swift in Sources */,
 				9DF31744287F7F530092C14B /* LoginView.swift in Sources */,
 				9DF3173C287F7CC50092C14B /* Coordinator.swift in Sources */,
+				9D6D3CDB288623DC00F2B761 /* LoginViewTextFieldDelegate+.swift in Sources */,
+				9D7CCB7E288F59AB00BCF4DD /* Age.swift in Sources */,
+				9D7CCB70288DCF2700BCF4DD /* ProfileViewPickerDelegate+.swift in Sources */,
 				9DF3175E2880D30A0092C14B /* String+.swift in Sources */,
+				9D7CCB6E288DCD0500BCF4DD /* LGPicker.swift in Sources */,
+				9D7CCB74288E293500BCF4DD /* CpfValidator.swift in Sources */,
 				9DF31753287F9BD20092C14B /* LGButton.swift in Sources */,
+				9D6D3CE02886490500F2B761 /* NSLayoutConstraint+.swift in Sources */,
+				9D6D3CD7288615DA00F2B761 /* LGView.swift in Sources */,
+				9D6D3CE22888B91300F2B761 /* RegisterCoordinator.swift in Sources */,
+				9D6D3CEC2888D63300F2B761 /* ProfileView.swift in Sources */,
+				9D6D3CE52888B9A600F2B761 /* RegisterViewController.swift in Sources */,
+				9D6D3CEE2888D64700F2B761 /* ProfileCoordinator.swift in Sources */,
+				9D6D3CD928861D9A00F2B761 /* LGViewController.swift in Sources */,
 				9DF31706287F7B2C0092C14B /* AppDelegate.swift in Sources */,
+				9D7CCB80288F59E100BCF4DD /* Gender.swift in Sources */,
 				9DF3173E287F7CEB0092C14B /* LoginCoordinator.swift in Sources */,
+				9D7CCB6C288D8DB600BCF4DD /* RegisterViewTextFieldDelegateExtension.swift in Sources */,
 				9DF31708287F7B2C0092C14B /* SceneDelegate.swift in Sources */,
 				9DF31710287F7B2C0092C14B /* Login.xcdatamodeld in Sources */,
 				9DF3174B287F878C0092C14B /* LocalizableStrings.swift in Sources */,
+				9D6D3CE72888B9CE00F2B761 /* RegisterView.swift in Sources */,
+				9D6D3CEA2888D61A00F2B761 /* ProfileViewController.swift in Sources */,
+				9D6D3CDE2886330400F2B761 /* RegExp.swift in Sources */,
+				9D7CCB72288DF3FB00BCF4DD /* ProfileViewTextFieldDelegate+.swift in Sources */,
+				9D7CCB79288E320F00BCF4DD /* AddressView.swift in Sources */,
 				9DF31758287FA1340092C14B /* LGLabel.swift in Sources */,
+				9D7CCB82288F6CB700BCF4DD /* AddressTextFieldDelegate+.swift in Sources */,
+				9D7CCB7B288E322E00BCF4DD /* AddressViewController.swift in Sources */,
+				9D7CCB77288E319F00BCF4DD /* AddressCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

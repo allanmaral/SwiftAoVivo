@@ -28,6 +28,7 @@ class LGTextField: UITextField {
     }
 
     init(placeholder: String, font: UIFont, keyboardType: UIKeyboardType, returnKeyType: UIReturnKeyType) {
+        self.hasError = false
         super.init(frame: .zero)
         
         self.placeholder = placeholder
@@ -58,14 +59,30 @@ class LGTextField: UITextField {
         }
     }
     
+    var hasError: Bool {
+        didSet {
+            updateBorder()
+        }
+    }
+    
     // MARK: - Draw border
     
     private func updateBorder() {
         borderLayer.frame = bounds
         borderLayer.borderWidth = isFirstResponder ? Constants.borderWidthActive : Constants.borderWidthDefault
-        borderLayer.borderColor = isFirstResponder ? UIColor.primary.cgColor : UIColor.inputBorder.cgColor
+        borderLayer.borderColor = borderColor()
         borderLayer.backgroundColor = UIColor.inputBackground.cgColor
         borderLayer.cornerRadius = Constants.cornerRadius
+    }
+    
+    private func borderColor() -> CGColor {
+        if hasError {
+            return UIColor.red.cgColor
+        } else if isFirstResponder {
+            return UIColor.primary.cgColor
+        } else {
+            return UIColor.inputBorder.cgColor
+        }
     }
     
     // MARK: - Overrides

@@ -6,9 +6,35 @@
   
 */
 
+// MARK: - Misc
+"done"="Concluir";
+"cancel"="Cancelar";
+
+// MARK: - Login / Register Screen
 "email"="Email";
 "emailPlaceholder"="Endereço de email para logar";
 "password"="Senha";
 "passwordPlaceholder"="Digite sua senha";
+"confirmPassword"="Cofirmar senha";
+"confirmPasswordPlaceholder"="Digite sua senha novamente";
 "buttonLogin"="Entrar";
 "buttonRegister"="Registrar";
+"login"="Login";
+"register"="Registrar";
+
+// MARK: - Profile Screen
+"profile"="Meus Dados";
+"age"="Faixa etária";
+"agePlaceholder"="Selecione sua idade";
+"gender"="Seu gênero";
+"genderPlaceholder"="Selecione seu gênero";
+"cpf"="CPF";
+"cpfPlaceholder"="Digite seu CPF";
+"phone"="Telefone";
+"phonePlaceholder"="Digite seu telefone";
+"next"="Próximo";
+
+// MARK: - Address Screen
+"address"="Endereço";
+"cep"="CEP";
+"cepPlaceholder"="Digite seu CEP";

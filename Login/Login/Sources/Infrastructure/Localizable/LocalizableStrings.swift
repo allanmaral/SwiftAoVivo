@@ -8,12 +8,38 @@
 import Foundation
 
 enum LocalizableStrings: String {
+    // MARK: - Misc
+    case done
+    case cancel
+    
+    // MARK: - Login / Regiser Screen
     case email
     case emailPlaceholder
     case password
     case passwordPlaceholder
+    case confirmPassword
+    case confirmPasswordPlaceholder
     case buttonLogin
     case buttonRegister
+    case login
+    case register
+    
+    // MARK: - Profile Screen
+    case profile
+    case age
+    case agePlaceholder
+    case gender
+    case genderPlaceholder
+    case cpf
+    case cpfPlaceholder
+    case phone
+    case phonePlaceholder
+    case next
+    
+    // MARK: - Address Screen
+    case address
+    case cep
+    case cepPlaceholder
     
     func localize() -> String {
         rawValue.localizeInCurrentBundle()
