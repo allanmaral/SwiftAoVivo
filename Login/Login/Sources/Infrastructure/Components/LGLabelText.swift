@@ -70,12 +70,13 @@ class LGLabelText: UIView {
     }
     
     func setupShowPasswordButton() {
+        let kButtonSize: CGFloat = 30
         let rightButton = UIButton(type: .custom)
-        rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        rightButton.frame = CGRect(x: 0, y: 0, width: kButtonSize, height: kButtonSize)
         rightButton.setImage(Constants.showPasswordImage, for: .normal)
         rightButton.addTarget(self, action: #selector(didChangePasswordVisibility), for: .touchUpInside)
         
-        let container = UIView(frame: CGRect(x: 0, y: 0, width: 30 + Constants.hozizontalPadding, height: 30))
+        let container = UIView(frame: CGRect(x: 0, y: 0, width: kButtonSize + Constants.hozizontalPadding, height: kButtonSize))
         container.addSubview(rightButton)
         
         rightButton.translatesAutoresizingMaskIntoConstraints = false
