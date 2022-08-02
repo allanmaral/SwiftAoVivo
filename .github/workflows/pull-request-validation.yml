@@ -65,9 +65,6 @@ jobs:
     - name: ⛱ Publish Coverage
       uses: codecov/codecov-action@v3
       with:
-        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+        token: ${{ secrets.CODECOV_TOKEN }}
         files: Login/Coverage/cobertura.xml
-        flags: unittests # optional
-        name: login-unittests # optional
-        fail_ci_if_error: true # optional (default = false)
-        verbose: true # optional (default = false)
+        fail_ci_if_error: true
