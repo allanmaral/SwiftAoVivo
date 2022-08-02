@@ -1,0 +1,9 @@
+coverage_service: cobertura.xml
+xcodeproj: Login.xcodeproj
+input_format: profdata
+output_directory: Coverage/
+build_directory: build/Build
+scheme: Login
+ignore:
+  - LoginTests/*
+  - LoginUITests/*

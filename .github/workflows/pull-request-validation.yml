@@ -1,0 +1,70 @@
+name: Pull Request
+on:
+  pull_request
+
+jobs:
+  build:
+    name: Build Check
+    runs-on: macos-12
+    steps:
+    - name: 👀 Checkout repository
+      uses: actions/checkout@v1
+
+    - name: 💎 Setup Gems
+      run: |
+        gem install xcpretty
+
+    - name: 🔨 Set Xcode version
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '13.4.1'
+
+    - name: 🔧 Build
+      run: |
+        cd Login
+        set -o pipefail
+        xcodebuild build \
+        -scheme Login \
+        -destination 'platform=iOS Simulator,name=iPhone 13 Pro' \
+        | xcpretty
+
+  test:
+    name: Test Check
+    needs: build
+    runs-on: macos-12
+    steps:
+    - name: 👀 Checkout repository
+      uses: actions/checkout@v1
+
+    - name: 💎 Setup Gems
+      run: |
+        gem install xcpretty
+        gem install slather
+
+    - name: 🔨 Set Xcode version
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '13.4.1'
+
+    - name: 🧪 Test
+      run: |
+        cd Login
+        set -o pipefail
+        xcodebuild test \
+        -scheme Login \
+        -destination 'platform=iOS Simulator,name=iPhone 13 Pro' \
+        -enableCodeCoverage YES \
+        -derivedDataPath build \
+        | xcpretty
+
+    - name: 📊 Coverage Report
+      run: |
+        cd Login
+        slather coverage -x --binary-basename 'Login'
+
+    - name: ⛱ Publish Coverage
+      uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: Login/Coverage/cobertura.xml
+        fail_ci_if_error: true
