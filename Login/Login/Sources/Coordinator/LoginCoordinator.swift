@@ -8,10 +8,10 @@
 import UIKit
 
 class LoginCoordinator: Coordinator {
-    let navigationController: UINavigationController
+    private var flowViewModel: FlowViewModel
     
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(flowViewModel: FlowViewModel) {
+        self.flowViewModel = flowViewModel
     }
     
     func start() {
@@ -19,11 +19,14 @@ class LoginCoordinator: Coordinator {
         viewController.didTapRegister = {
             self.navigateToRegisterView()
         }
-        self.navigationController.pushViewController(viewController, animated: true)
+        viewController.didTapLogin = { email, password in
+            self.flowViewModel.userProfileViewModel.email = email
+        }
+        self.flowViewModel.navigationController.pushViewController(viewController, animated: true)
     }
     
     func navigateToRegisterView() {
-        let coordinator = RegisterCoordinator(navigationController: self.navigationController)
+        let coordinator = RegisterCoordinator(flowViewModel: flowViewModel)
         coordinator.start()
     }
     

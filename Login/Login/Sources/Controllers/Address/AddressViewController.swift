@@ -8,9 +8,16 @@
 import UIKit
 
 class AddressViewController: LGViewController {
-
+    
+    // MARK: - Clousures
+    var didSearchCep: ((_ cep: String) -> Void)?
+    
+    // MARK: - Properties
     lazy var addressView: AddressView = {
         let view = AddressView()
+        view.didSearchCep = { [weak self] cep in
+            self?.didSearchCep?(cep)
+        }
         
         return view
     }()
@@ -26,6 +33,18 @@ class AddressViewController: LGViewController {
         
         self.view = addressView
         self.title = LocalizableStrings.address.localize()
+    }
+    
+    func setAddressFromSearch(_ cepViewModel: CepViewModel) {
+        addressView.setAddressFromSearch(cepViewModel)
+    }
+    
+    func showInvalidCepMessage() {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "Erro", message: "CEP não encontrado", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true)
+        }
     }
 
 }

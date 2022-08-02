@@ -8,16 +8,29 @@
 import UIKit
 
 class AddressCoordinator: Coordinator {
-    let navigationController: UINavigationController
+    let flowViewModel: FlowViewModel
     
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(flowViewModel: FlowViewModel) {
+        self.flowViewModel = flowViewModel
     }
     
     func start() {
         let viewController = AddressViewController()
+        viewController.didSearchCep = { cep in
+            CepViewModel.get(cep: cep) { (viewModel, error) in
+                guard let viewModel = viewModel else { return }
+                
+                if viewModel.isCepValid {
+                    viewController.setAddressFromSearch(viewModel)
+                } else {
+                    viewController.showInvalidCepMessage()
+                }
+                
+            }
+            
+        }
         
-        self.navigationController.setViewControllers([viewController], animated: true)
+        self.flowViewModel.navigationController.setViewControllers([viewController], animated: true)
     }
     
 }

@@ -103,7 +103,7 @@ class LoginView: LGView {
     
     // MARK: - Actions
     
-    @objc private func loginButtonWasTapped() {
+    @objc func loginButtonWasTapped() {
         if !RegExp.checkPasswordComplexity(password: self.passwordField.textField.text!, length: 6, patternsToEscape:[], caseSensitivty: true, numericDigits: true, specialCharacter: true) {
             print("senha nao preenche os requisitos")
             self.passwordField.textField.hasError = true
@@ -118,7 +118,7 @@ class LoginView: LGView {
         }
     }
     
-    @objc private func registerTapped() {
+    @objc func registerTapped() {
         didTapRegister?()
     }
     

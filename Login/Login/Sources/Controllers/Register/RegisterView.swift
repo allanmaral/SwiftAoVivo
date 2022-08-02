@@ -73,7 +73,7 @@ class RegisterView: LGView {
     
     private func setupButtonRegister() {
         contentView.addSubview(buttonRegister)
-        buttonLogin.addTarget(self, action: #selector(registerTapped), for: .touchUpInside)
+        buttonRegister.addTarget(self, action: #selector(registerTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             buttonRegister.topAnchor.constraint(equalTo: confirmPasswordField.bottomAnchor, constant: Spacing.large),

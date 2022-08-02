@@ -9,10 +9,10 @@ import UIKit
 
 class ProfileCoordinator: Coordinator {
     
-    let navigationController: UINavigationController
+    let flowViewModel: FlowViewModel
 
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(flowViewModel: FlowViewModel) {
+        self.flowViewModel = flowViewModel
     }
     
     func start() {
@@ -20,11 +20,11 @@ class ProfileCoordinator: Coordinator {
         viewController.didTapNext = { _, _, _, _ in
             self.navigateToAddress()
         }
-        navigationController.pushViewController(viewController, animated: true)
+        flowViewModel.navigationController.pushViewController(viewController, animated: true)
     }
     
     func navigateToAddress() {
-        let coordinator = AddressCoordinator(navigationController: navigationController)
+        let coordinator = AddressCoordinator(flowViewModel: flowViewModel)
         coordinator.start()
     }
     
