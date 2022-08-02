@@ -26,14 +26,7 @@ jobs:
         xcodebuild build \
         -scheme Login \
         -destination 'platform=iOS Simulator,name=iPhone 13 Pro' \
-        -derivedDataPath build \
         | xcpretty
-    
-    - name: 📦 Pack derived data artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: build
-        path: Login/build
 
   test:
     name: Test
@@ -42,12 +35,6 @@ jobs:
     steps:
     - name: 👀 Checkout repository
       uses: actions/checkout@v1
-
-    - name: 📦 Unpack derived data artifacts
-      uses: actions/download-artifacts@v3
-      with:
-        name: build
-        path: Login/build
 
     - name: 💎 Setup Gems
       run: |
@@ -65,5 +52,4 @@ jobs:
         xcodebuild test \
         -scheme Login \
         -destination 'platform=iOS Simulator,name=iPhone 13 Pro' \
-        -derivedDataPath build \
         | xcpretty
