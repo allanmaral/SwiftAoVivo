@@ -111,10 +111,10 @@ class LoginView: LGView {
         } else {
             self.passwordField.textField.hasError = false
             
-            guard let email = self.emailField.textField.text else { return }
-            guard let password = self.passwordField.textField.text else { return }
-            
-            didTapLogin?(email, password)
+            if let email = self.emailField.textField.text,
+               let password = self.passwordField.textField.text {
+                didTapLogin?(email, password)                
+            }
         }
     }
     

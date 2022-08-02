@@ -96,22 +96,24 @@ class RegisterView: LGView {
     
     // MARK: - Actions
     
-    @objc private func registerTapped() {
-        if !RegExp.checkPasswordComplexity(password: self.passwordField.textField.text!, length: 6, patternsToEscape:[], caseSensitivty: true, numericDigits: true, specialCharacter: true) {
+    @objc func registerTapped() {
+        if !RegExp.checkPasswordComplexity(password: self.passwordField.textField.text!, length: 6, patternsToEscape:[], caseSensitivty: true, numericDigits: true, specialCharacter: true)
+            || self.passwordField.textField.text != self.confirmPasswordField.textField.text {
             print("senha nao preenche os requisitos")
             self.passwordField.textField.hasError = true
             didSetWrongPassword?()
         } else {
             self.passwordField.textField.hasError = false
             
-            guard let email = self.emailField.textField.text else { return }
-            guard let password = self.passwordField.textField.text else { return }
+            if let email = self.emailField.textField.text,
+               let password = self.passwordField.textField.text {
+                didTapRegister?(email, password)                
+            }
             
-            didTapRegister?(email, password)
         }
     }
     
-    @objc private func loginTapped() {
+    @objc func loginTapped() {
         didTapLogin?()
     }
 
