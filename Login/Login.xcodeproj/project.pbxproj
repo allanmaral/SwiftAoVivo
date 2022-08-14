@@ -10,6 +10,7 @@
 		9D09DA6E2897334A00D6A177 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D09DA6D2897334A00D6A177 /* UserProfileViewModel.swift */; };
 		9D09DA7028988AAB00D6A177 /* LoginViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D09DA6F28988AAB00D6A177 /* LoginViewTest.swift */; };
 		9D09DA732899D85500D6A177 /* RegisterViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D09DA722899D85500D6A177 /* RegisterViewTest.swift */; };
+		9D634847289B41A100EC1546 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D634846289B41A100EC1546 /* Keychain.swift */; };
 		9D6D3CD7288615DA00F2B761 /* LGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CD6288615DA00F2B761 /* LGView.swift */; };
 		9D6D3CD928861D9A00F2B761 /* LGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CD828861D9A00F2B761 /* LGViewController.swift */; };
 		9D6D3CDB288623DC00F2B761 /* LoginViewTextFieldDelegate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D3CDA288623DC00F2B761 /* LoginViewTextFieldDelegate+.swift */; };
@@ -37,6 +38,9 @@
 		9D7CCB8C2891F09B00BCF4DD /* CepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CCB8B2891F09B00BCF4DD /* CepViewModel.swift */; };
 		9D7E408F288252FA009D419D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D7E408E288252FA009D419D /* Colors.xcassets */; };
 		9D7E409128826091009D419D /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E409028826091009D419D /* Font+.swift */; };
+		9DCFFD7228A1C06C004D30B2 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCFFD7128A1C06C004D30B2 /* HomeCoordinator.swift */; };
+		9DCFFD7628A1C0F2004D30B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCFFD7528A1C0F2004D30B2 /* HomeViewController.swift */; };
+		9DCFFD7828A1C14D004D30B2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCFFD7728A1C14D004D30B2 /* HomeView.swift */; };
 		9DF31706287F7B2C0092C14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF31705287F7B2C0092C14B /* AppDelegate.swift */; };
 		9DF31708287F7B2C0092C14B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF31707287F7B2C0092C14B /* SceneDelegate.swift */; };
 		9DF31710287F7B2C0092C14B /* Login.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DF3170E287F7B2C0092C14B /* Login.xcdatamodeld */; };
@@ -81,6 +85,7 @@
 		9D09DA6D2897334A00D6A177 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		9D09DA6F28988AAB00D6A177 /* LoginViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTest.swift; sourceTree = "<group>"; };
 		9D09DA722899D85500D6A177 /* RegisterViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewTest.swift; sourceTree = "<group>"; };
+		9D634846289B41A100EC1546 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		9D6D3CD6288615DA00F2B761 /* LGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGView.swift; sourceTree = "<group>"; };
 		9D6D3CD828861D9A00F2B761 /* LGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGViewController.swift; sourceTree = "<group>"; };
 		9D6D3CDA288623DC00F2B761 /* LoginViewTextFieldDelegate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewTextFieldDelegate+.swift"; sourceTree = "<group>"; };
@@ -108,6 +113,9 @@
 		9D7CCB8B2891F09B00BCF4DD /* CepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CepViewModel.swift; sourceTree = "<group>"; };
 		9D7E408E288252FA009D419D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9D7E409028826091009D419D /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		9DCFFD7128A1C06C004D30B2 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		9DCFFD7528A1C0F2004D30B2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9DCFFD7728A1C14D004D30B2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9DF31702287F7B2C0092C14B /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF31705287F7B2C0092C14B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DF31707287F7B2C0092C14B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +182,7 @@
 			children = (
 				9D6D3CDD2886330400F2B761 /* RegExp.swift */,
 				9D7CCB73288E293500BCF4DD /* CpfValidator.swift */,
+				9D634846289B41A100EC1546 /* Keychain.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -251,6 +260,15 @@
 				9D09DA6D2897334A00D6A177 /* UserProfileViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9DCFFD7328A1C0DA004D30B2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9DCFFD7528A1C0F2004D30B2 /* HomeViewController.swift */,
+				9DCFFD7728A1C14D004D30B2 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		9DF316F9287F7B2C0092C14B = {
@@ -334,6 +352,7 @@
 				9DF3173D287F7CEB0092C14B /* LoginCoordinator.swift */,
 				9D6D3CED2888D64700F2B761 /* ProfileCoordinator.swift */,
 				9D6D3CE12888B91300F2B761 /* RegisterCoordinator.swift */,
+				9DCFFD7128A1C06C004D30B2 /* HomeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -341,6 +360,7 @@
 		9DF3173F287F7E250092C14B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9DCFFD7328A1C0DA004D30B2 /* Home */,
 				9D7CCB75288E317C00BCF4DD /* Address */,
 				9DF31740287F7E2F0092C14B /* Login */,
 				9D6D3CE82888D5FD00F2B761 /* Profile */,
@@ -559,7 +579,9 @@
 				9DF31756287F9D4B0092C14B /* Constants.swift in Sources */,
 				9DF3175C2880D2580092C14B /* LGLabelText.swift in Sources */,
 				9DF3175A2880CE810092C14B /* LGTextField.swift in Sources */,
+				9DCFFD7628A1C0F2004D30B2 /* HomeViewController.swift in Sources */,
 				9DF31750287F97060092C14B /* Color+.swift in Sources */,
+				9D634847289B41A100EC1546 /* Keychain.swift in Sources */,
 				9DF31744287F7F530092C14B /* LoginView.swift in Sources */,
 				9DF3173C287F7CC50092C14B /* Coordinator.swift in Sources */,
 				9D6D3CDB288623DC00F2B761 /* LoginViewTextFieldDelegate+.swift in Sources */,
@@ -573,7 +595,9 @@
 				9D6D3CD7288615DA00F2B761 /* LGView.swift in Sources */,
 				9D6D3CE22888B91300F2B761 /* RegisterCoordinator.swift in Sources */,
 				9D6D3CEC2888D63300F2B761 /* ProfileView.swift in Sources */,
+				9DCFFD7828A1C14D004D30B2 /* HomeView.swift in Sources */,
 				9D7CCB8C2891F09B00BCF4DD /* CepViewModel.swift in Sources */,
+				9DCFFD7228A1C06C004D30B2 /* HomeCoordinator.swift in Sources */,
 				9D6D3CE52888B9A600F2B761 /* RegisterViewController.swift in Sources */,
 				9D6D3CEE2888D64700F2B761 /* ProfileCoordinator.swift in Sources */,
 				9D6D3CD928861D9A00F2B761 /* LGViewController.swift in Sources */,

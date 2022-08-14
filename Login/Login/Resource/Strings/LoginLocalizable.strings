@@ -9,6 +9,8 @@
 // MARK: - Misc
 "done"="Concluir";
 "cancel"="Cancelar";
+"skip"="Pular";
+"save"="Salvar";
 
 // MARK: - Login / Register Screen
 "email"="Email";
@@ -38,3 +40,16 @@
 "address"="Endereço";
 "cep"="CEP";
 "cepPlaceholder"="Digite seu CEP";
+"street"="Rua";
+"streetPlaceholder"="Digite sua rua";
+"number"="Número";
+"numberPlaceholder"="Digite seu número";
+"neighbourhood"="Bairro";
+"neighbourhoodPlaceholder"="Digite seu bairro";
+"city"="Cidade";
+"cityPlaceholder"="Digite sua cidade";
+"state"="Estado";
+"statePlaceholder"="Digite seu estado";
+
+// MARK: - Home Screen
+"home"="Início";

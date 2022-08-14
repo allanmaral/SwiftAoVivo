@@ -29,6 +29,11 @@ class LGLabelText: UIView {
         self.textField.returnKeyType = returnKeyType
         self.textField.isSecureTextEntry = isSecureTextEntry
         
+        if keyboardType == .emailAddress {
+            self.textField.autocapitalizationType = .none
+            self.textField.autocorrectionType = .no
+        }
+        
         setupVisualElements()
     }
     
@@ -74,6 +79,7 @@ class LGLabelText: UIView {
         let rightButton = UIButton(type: .custom)
         rightButton.frame = CGRect(x: 0, y: 0, width: kButtonSize, height: kButtonSize)
         rightButton.setImage(Constants.showPasswordImage, for: .normal)
+        rightButton.tintColor = .labelText
         rightButton.addTarget(self, action: #selector(didChangePasswordVisibility), for: .touchUpInside)
         
         let container = UIView(frame: CGRect(x: 0, y: 0, width: kButtonSize + Constants.hozizontalPadding, height: kButtonSize))

@@ -45,30 +45,35 @@ class LGViewController: UIViewController {
     }
     
     private func registerKeyboardNotifications() {
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) {
-            [weak self] notification in
-            guard let keyboardInfo = notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue else { return }
-            let keyboardSize = keyboardInfo.cgRectValue.height
-            self?.keyboardWillAppear(keyboardSize)
-        }
-        
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) {
-            [weak self] notification in
-            self?.keyboardWillHide()
-        }
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     private func unregisterKeyboardNotifications() {
         NotificationCenter.default.removeObserver(self)
     }
     
+    @objc func adjustForKeyboard(notification: Notification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            keyboardWillHide()
+        } else {
+            keyboardWillAppear(keyboardViewEndFrame.height)
+        }
+    }
+    
     func keyboardWillAppear(_ keyboardHeight: CGFloat) {
         guard let scrollView = scrollView else { return }
-        let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+        let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight - view.safeAreaInsets.bottom, right: 0)
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
     }
-    
+
     func keyboardWillHide() {
         guard let scrollView = scrollView else { return }
         scrollView.contentInset = .zero

@@ -16,7 +16,6 @@ class CepProvider {
         
         let task = URLSession.shared.dataTask(with: urlRequest as URLRequest) { (data, response, error) in
             if let error = error {
-                debugPrint(error)
                 completion(nil, error)
             }
             
@@ -25,11 +24,8 @@ class CepProvider {
                 
                 guard let model = try? decoder.decode(CepModel.self, from: data) else {
                     completion(nil, error)
-                    
                     return
                 }
-                
-                print(model)
                 
                 completion(model, nil)
             }

@@ -11,6 +11,8 @@ enum LocalizableStrings: String {
     // MARK: - Misc
     case done
     case cancel
+    case skip
+    case save
     
     // MARK: - Login / Regiser Screen
     case email
@@ -40,6 +42,19 @@ enum LocalizableStrings: String {
     case address
     case cep
     case cepPlaceholder
+    case state
+    case statePlaceholder
+    case city
+    case cityPlaceholder
+    case neighbourhood
+    case neighbourhoodPlaceholder
+    case street
+    case streetPlaceholder
+    case number
+    case numberPlaceholder
+    
+    // MARK: - Home Screen
+    case home
     
     func localize() -> String {
         rawValue.localizeInCurrentBundle()

@@ -14,8 +14,8 @@ struct CepViewModel {
         self.model = model
     }
     
-    var fu: String {
-        model.fu ?? String.empty
+    var state: String {
+        model.state ?? String.empty
     }
     
     var city: String {

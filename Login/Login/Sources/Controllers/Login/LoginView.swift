@@ -22,8 +22,8 @@ class LoginView: LGView {
     }()
     
     lazy var emailField = LGLabelText(label: LocalizableStrings.email.localize(),
-                                      placeholder: LocalizableStrings.emailPlaceholder.localize(),
-                                      keyboardType: .emailAddress)
+                                  placeholder: LocalizableStrings.emailPlaceholder.localize(),
+                                  keyboardType: .emailAddress)
     
     lazy var passwordField = LGLabelText(label: LocalizableStrings.password.localize(),
                                          placeholder: LocalizableStrings.passwordPlaceholder.localize(),
@@ -91,7 +91,6 @@ class LoginView: LGView {
     
     private func setupButtonRegister() {
         contentView.addSubview(buttonRegister)
-        
         buttonRegister.addTarget(self, action: #selector(registerTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([

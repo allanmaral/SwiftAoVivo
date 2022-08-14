@@ -25,12 +25,24 @@ class AddressCoordinator: Coordinator {
                 } else {
                     viewController.showInvalidCepMessage()
                 }
-                
             }
+        }
+        
+        viewController.didSave = { street, number, city, state in
+            self.flowViewModel.userProfileViewModel.street = street
+            self.flowViewModel.userProfileViewModel.number = number
+            self.flowViewModel.userProfileViewModel.city = city
+            self.flowViewModel.userProfileViewModel.state = state
             
+            self.navigateToHomeView()
         }
         
         self.flowViewModel.navigationController.setViewControllers([viewController], animated: true)
+    }
+    
+    func navigateToHomeView() {
+        let coordinator = LoginCoordinator(flowViewModel: flowViewModel)
+        coordinator.start()
     }
     
 }

@@ -36,11 +36,6 @@ class LGView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Keyboard
-    func afterShowKeyboard() {
-        scrollView.setContentOffset(CGPoint(x: 0, y: 70), animated: true)
-    }
-    
     // MARK: - Setup Visual Elements
     
     func setupVisualElements() {

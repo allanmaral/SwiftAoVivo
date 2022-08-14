@@ -6,7 +6,7 @@
 //
 
 struct CepModel: Codable {
-    let fu: String?
+    let state: String?
     let city: String?
     let neighbourhood: String?
     let placeType: String?
@@ -15,7 +15,7 @@ struct CepModel: Codable {
     let resultTxt: String?
 
     enum CodingKeys: String, CodingKey {
-        case fu = "uf"
+        case state = "uf"
         case city = "cidade"
         case neighbourhood = "bairro"
         case placeType = "tipo_logradouro"

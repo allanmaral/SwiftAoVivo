@@ -11,17 +11,45 @@ class AddressView: LGView {
     
     // MARK: - Clousures
     var didSearchCep: ((_ cep: String) -> Void)?
+    var didSave: ((_ street: String, _ number: String, _ city: String, _ state: String) -> Void)?
+    var didSkip: (() -> Void)?
     
     // MARK: - Properties
     lazy var cepField = LGLabelText(label: LocalizableStrings.cep.localize(),
                                     placeholder: LocalizableStrings.cepPlaceholder.localize(),
                                     keyboardType: .numberPad,
                                     returnKeyType: .next)
+    
     lazy var findCepButton = LGButton(image: UIImage(systemName: "magnifyingglass")!)
-    lazy var streeField = LGLabelText(label: "Rua",
-                                      placeholder: "Informe sua rua")
     
+    lazy var streetField = LGLabelText(label: LocalizableStrings.street.localize(),
+                                       placeholder: LocalizableStrings.streetPlaceholder.localize(),
+                                       returnKeyType: .next)
     
+    lazy var numberField = LGLabelText(label: LocalizableStrings.number.localize(),
+                                       placeholder: LocalizableStrings.numberPlaceholder.localize(),
+                                       returnKeyType: .next)
+    
+    lazy var cityField = LGLabelText(label: LocalizableStrings.city.localize(),
+                                     placeholder: LocalizableStrings.cityPlaceholder.localize(),
+                                     returnKeyType: .next)
+    
+    lazy var stateField = LGLabelText(label: LocalizableStrings.state.localize(),
+                                      placeholder: LocalizableStrings.statePlaceholder.localize(),
+                                      returnKeyType: .next)
+    
+    lazy var saveButton = LGButton(title: LocalizableStrings.save.localize(),
+                                   style: .primary)
+    
+    lazy var skipButton = LGButton(title: LocalizableStrings.skip.localize(),
+                                   style: .transparent)
+    
+    lazy var loadingIndicator: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .large)
+        view.color = .primary
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     // MARK: - Setup Visual Elements
     
@@ -30,6 +58,13 @@ class AddressView: LGView {
         
         setupCepField()
         setupStreetField()
+        setupNumberField()
+        setupCityField()
+        setupStateField()
+        setupSaveButton()
+        setupSkipButton()
+        
+        setupLoadingIndicator()
     }
     
     private func setupCepField() {
@@ -52,14 +87,85 @@ class AddressView: LGView {
     }
     
     private func setupStreetField() {
-        contentView.addSubview(streeField)
+        contentView.addSubview(streetField)
         
-        streeField.textField.delegate = self
+        streetField.textField.delegate = self
         
         NSLayoutConstraint.activate([
-            streeField.topAnchor.constraint(equalTo: cepField.textField.bottomAnchor, constant: Spacing.medium),
-            streeField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: LayoutContansts.horizontalMargin),
-            streeField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -LayoutContansts.horizontalMargin)
+            streetField.topAnchor.constraint(equalTo: cepField.textField.bottomAnchor, constant: Spacing.medium),
+            streetField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: LayoutContansts.horizontalMargin),
+            streetField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -LayoutContansts.horizontalMargin)
+        ])
+    }
+    
+    private func setupNumberField() {
+        contentView.addSubview(numberField)
+        
+        numberField.textField.delegate = self
+        
+        NSLayoutConstraint.activate([
+            numberField.topAnchor.constraint(equalTo: streetField.textField.bottomAnchor, constant: Spacing.medium),
+            numberField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: LayoutContansts.horizontalMargin),
+            numberField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -LayoutContansts.horizontalMargin)
+        ])
+    }
+    
+    private func setupCityField() {
+        contentView.addSubview(cityField)
+        
+        cityField.textField.delegate = self
+        
+        NSLayoutConstraint.activate([
+            cityField.topAnchor.constraint(equalTo: numberField.bottomAnchor, constant: Spacing.medium),
+            cityField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: LayoutContansts.horizontalMargin),
+            cityField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -LayoutContansts.horizontalMargin)
+        ])
+    }
+    
+    private func setupStateField() {
+        contentView.addSubview(stateField)
+        
+        stateField.textField.delegate = self
+        
+        NSLayoutConstraint.activate([
+            stateField.topAnchor.constraint(equalTo: cityField.bottomAnchor, constant: Spacing.medium),
+            stateField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: LayoutContansts.horizontalMargin),
+            stateField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -LayoutContansts.horizontalMargin)
+        ])
+    }
+    
+    private func setupSaveButton() {
+        contentView.addSubview(saveButton)
+        
+        saveButton.addTarget(self, action: #selector(saveTapped), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            saveButton.topAnchor.constraint(equalTo: stateField.bottomAnchor, constant: Spacing.large),
+            saveButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: LayoutContansts.horizontalMargin),
+            saveButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -LayoutContansts.horizontalMargin)
+        ])
+    }
+    
+    private func setupSkipButton() {
+        contentView.addSubview(skipButton)
+        
+        skipButton.addTarget(self, action: #selector(skipTapped), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            skipButton.topAnchor.constraint(equalTo: saveButton.bottomAnchor, constant: Spacing.small),
+            skipButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: LayoutContansts.horizontalMargin),
+            skipButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -LayoutContansts.horizontalMargin)
+        ])
+    }
+    
+    private func setupLoadingIndicator() {
+        addSubview(loadingIndicator)
+        
+        loadingIndicator.isHidden = true
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
     
@@ -67,28 +173,33 @@ class AddressView: LGView {
     
     @objc private func findCepTapped() {
         guard let cep = cepField.textField.text else { return }
-        didSearchCep?(cep)
         
-//        lazy var indicator: UIActivityIndicatorView = {
-//            let view = UIActivityIndicatorView(style: .large)
-//            view.color = .red
-//            view.startAnimating()
-//            view.translatesAutoresizingMaskIntoConstraints = false
-//            return view
-//        }()
-//
-//        addSubview(indicator)
-//
-//        NSLayoutConstraint.activate([
-//            indicator.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            indicator.centerYAnchor.constraint(equalTo: centerYAnchor)
-//        ])
+        loadingIndicator.isHidden = false
+        loadingIndicator.startAnimating()
+        
+        didSearchCep?(cep)
+    }
+    
+    @objc private func saveTapped() {
+        if let street = streetField.textField.text,
+            let number = numberField.textField.text,
+            let city = cityField.textField.text,
+           let state = stateField.textField.text {
+            didSave?(street, number, city, state)
+        }
+    }
+    
+    @objc private func skipTapped() {
+        didSkip?()
     }
     
     func setAddressFromSearch(_ cepViewModel: CepViewModel) {
-        DispatchQueue.main.async {
-            self.streeField.textField.text = cepViewModel.street
-        }
+        stateField.textField.text = cepViewModel.state
+        cityField.textField.text = cepViewModel.city
+        streetField.textField.text = cepViewModel.street
+        
+        loadingIndicator.stopAnimating()
+        loadingIndicator.isHidden = true
     }
     
 }
